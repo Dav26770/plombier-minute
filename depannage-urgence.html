@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Depannage plomberie 24h/24 | Plombier Minute</title>
+  <meta name="description" content="Dépannage plomberie d'urgence 24h/24 et 7j/7 à Paris et en Île-de-France. Intervention en moins de 30 min. Fuite, canalisation bouchée, chauffe-eau : appelez le 01 00 00 00 00.">
+  <link rel="canonical" href="https://[DOMAINE]/depannage-urgence.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18181B">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="assets/js/main.js" defer></script>
+  <style>
+    /* Scoped overrides – page-depannage-urgence uniquement */
+    body.page-depannage-urgence .urgence-tel-block {
+      background: var(--c-dark);
+      border: 2px solid var(--c-primary);
+      border-radius: var(--r-xl);
+      padding: clamp(2rem, 5vw, 3.4rem);
+      text-align: center;
+      box-shadow: var(--sh-orange);
+      position: relative;
+      overflow: hidden;
+    }
+    body.page-depannage-urgence .urgence-tel-block::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(600px 300px at 50% 0%, rgba(249,115,22,.22), transparent);
+      pointer-events: none;
+    }
+    body.page-depannage-urgence .urgence-tel-block .tel-number {
+      font-family: var(--ff-head);
+      font-weight: 800;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      color: var(--c-accent);
+      display: block;
+      letter-spacing: .04em;
+      margin: .7rem 0 1.4rem;
+      position: relative;
+    }
+    body.page-depannage-urgence .urgence-tel-block p {
+      color: rgba(255,247,237,.82);
+      font-size: var(--fs-500);
+      position: relative;
+      margin-bottom: 1.6rem;
+    }
+    body.page-depannage-urgence .urgence-tel-block .eyebrow {
+      color: var(--c-accent);
+    }
+  </style>
+</head>
+<body class="page-depannage-urgence">
+
+<!-- HEADER : verbatim sur toutes les pages. Pour marquer le lien actif, ajouter class="active" aria-current="page" sur le <a> de la page courante (dans .nav-links ET dans .mobile-menu nav), et le RETIRER de "Accueil". Les pages internes : retirer active/aria-current de index.html. -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Plombier Minute, accueil">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#18181B"/>
+          <circle cx="32" cy="34" r="18" fill="none" stroke="#F97316" stroke-width="4"/>
+          <path d="M26 12h12M32 16v6" stroke="#FB923C" stroke-width="4" stroke-linecap="round"/>
+          <path d="M32 34V24M32 34l9 5" stroke="#FFF7ED" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="32" cy="34" r="2.6" fill="#FFF7ED"/>
+        </svg>
+        <span>Plombier<b>Minute</b></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="nos-services.html">Services</a>
+        <a href="depannage-urgence.html" class="active" aria-current="page">Urgence 24/7</a>
+        <a href="debouchage-canalisation.html">Débouchage</a>
+        <a href="recherche-fuite.html">Recherche de fuite</a>
+        <a href="wc-sanitaires.html">WC &amp; sanitaires</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="zones-intervention.html">Zones</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="contact.html">Devis gratuit</a>
+        <a class="btn btn-call" href="tel:0100000000" aria-label="Appeler le 01 00 00 00 00">
+          <span class="pulse-dot" aria-hidden="true"></span> 01 00 00 00 00
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU : verbatim. Mettre active/aria-current sur le bon <a>. -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="backdrop" data-close></div>
+    <div class="panel" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+      <div class="mm-head">
+        <span class="brand"><span>Plombier<b>Minute</b></span></span>
+        <button class="mm-close" type="button" aria-label="Fermer le menu" data-close>&times;</button>
+      </div>
+      <nav aria-label="Navigation mobile">
+        <a href="index.html">Accueil</a>
+        <a href="nos-services.html">Services</a>
+        <a href="depannage-urgence.html" class="active" aria-current="page">Urgence 24/7</a>
+        <a href="debouchage-canalisation.html">Débouchage</a>
+        <a href="recherche-fuite.html">Recherche de fuite</a>
+        <a href="wc-sanitaires.html">WC &amp; sanitaires</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="zones-intervention.html">Zones</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="mm-foot">
+        <a class="btn btn-primary btn-block" href="tel:0100000000">Appeler 01 00 00 00 00</a>
+        <a class="btn btn-ghost btn-block" href="contact.html">Demander un devis</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li><span aria-current="page">Urgence 24/7</span></li>
+          </ol>
+        </nav>
+        <h1>Dépannage plomberie 24h/24</h1>
+        <p>Fuite, canalisation bouchée, chauffe-eau en panne : Plombier Minute intervient en moins de 30 minutes, à toute heure, tous les jours de l'année sur Paris et l'Île-de-France.</p>
+      </div>
+    </section>
+
+    <!-- REASSURANCE STRIP -->
+    <section class="reassure reveal">
+      <div class="container">
+        <div class="ra">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span><b>Disponible 24h/24</b><span>7j/7, jours fériés compris</span></span>
+        </div>
+        <div class="ra">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z"/></svg>
+          <span><b>Intervention &lt; 30 min</b><span>Délai garanti en Île-de-France</span></span>
+        </div>
+        <div class="ra">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+          <span><b>Prix annoncé avant</b><span>Devis gratuit avant travaux</span></span>
+        </div>
+        <div class="ra">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><b>01 00 00 00 00</b><span>Décroché en moins de 3 sonneries</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOC TELEPHONE URGENCE -->
+    <section class="section section--ink">
+      <div class="container container--narrow">
+        <div class="urgence-tel-block reveal-zoom">
+          <span class="eyebrow">Urgence plomberie</span>
+          <a class="tel-number" href="tel:0100000000" aria-label="Appeler le 01 00 00 00 00">01 00 00 00 00</a>
+          <p>Astreinte active maintenant — un plombier vous répond en moins de 3 sonneries, 24h/24 et 7j/7, week-ends et jours fériés compris.</p>
+          <div class="btn-row" style="justify-content:center">
+            <a class="btn btn-primary" href="tel:0100000000">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Appeler maintenant
+            </a>
+            <a class="btn btn-ghost" href="contact.html">Demander un devis</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section section--cream" data-count-root>
+      <div class="container">
+        <div class="stats reveal">
+          <div class="stat">
+            <div class="num"><span data-count="30">0</span><span class="suffix"> min</span></div>
+            <div class="lbl">Délai d'intervention moyen</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-count="24">0</span><span class="suffix">h</span></div>
+            <div class="lbl">Disponibilité quotidienne</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-count="7">0</span><span class="suffix">j/7</span></div>
+            <div class="lbl">Week-ends et jours fériés</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span data-count="98">0</span><span class="suffix">%</span></div>
+            <div class="lbl">Clients satisfaits après urgence</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- URGENCES TRAITEES -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Situations d'urgence</span>
+          <h2>Toutes les urgences plomberie prises en charge</h2>
+          <p>Quelle que soit la panne, notre équipe d'astreinte est formée pour diagnostiquer et traiter le problème dès la première intervention.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card card-service reveal" data-delay="1">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7Z"/></svg>
+            </span>
+            <h3>Fuite d'eau</h3>
+            <p>Rupture de canalisation, joint défaillant, robinet qui fuit : nous coupons la fuite et réparons dans la foulée.</p>
+            <a class="more" href="recherche-fuite.html">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+          <article class="card card-service reveal" data-delay="2">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 16a4 4 0 0 1-.88-7.903A5 5 0 1 1 15.9 6h.1a5 5 0 0 1 1 9.9M9 19l3 3m0 0 3-3m-3 3V10"/></svg>
+            </span>
+            <h3>Canalisation bouchée</h3>
+            <p>Évier, baignoire, WC, colonne d'évacuation : débouchage par furet, ventouse ou hydrocurage haute pression.</p>
+            <a class="more" href="debouchage-canalisation.html">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+          <article class="card card-service reveal" data-delay="3">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </span>
+            <h3>Chauffe-eau / cumulus</h3>
+            <p>Panne, fuite, plus d'eau chaude : diagnostic rapide et remplacement si nécessaire, avec matériel embarqué dans notre véhicule.</p>
+            <a class="more" href="nos-services.html">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+          <article class="card card-service reveal" data-delay="1">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </span>
+            <h3>WC hors service</h3>
+            <p>Chasse d'eau cassée, WC bouché ou inondé : intervention immédiate pour rétablir l'usage de vos sanitaires.</p>
+            <a class="more" href="wc-sanitaires.html">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+          <article class="card card-service reveal" data-delay="2">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v6m0 0a6 6 0 1 0 6 6H6a6 6 0 0 0 6-6Z"/></svg>
+            </span>
+            <h3>Dégât des eaux</h3>
+            <p>Voisin inondé, plafond qui goutte : notre plombier localise la source, stoppe la fuite et établit un constat d'urgence.</p>
+            <a class="more" href="recherche-fuite.html">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+          <article class="card card-service reveal" data-delay="3">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+            </span>
+            <h3>Robinetterie cassée</h3>
+            <p>Robinet arraché, mitigeur bloqué, vanne de coupure défaillante : remplacement à la minute avec pièces en stock.</p>
+            <a class="more" href="nos-services.html">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS EN ETAPES -->
+    <section class="section section--ink">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Comment ça marche</span>
+          <h2>De votre appel à la réparation en 4 étapes</h2>
+          <p>Un process rodé pour aller vite — parce que chaque minute compte quand une fuite menace votre logement.</p>
+        </div>
+        <div class="steps grid-4 reveal" data-delay="1">
+          <div class="step">
+            <div class="step-n" aria-hidden="true"></div>
+            <h3>Vous appelez</h3>
+            <p>Le 01 00 00 00 00 — décroché en moins de 3 sonneries, à toute heure.</p>
+          </div>
+          <div class="step">
+            <div class="step-n" aria-hidden="true"></div>
+            <h3>Diagnostic téléphonique</h3>
+            <p>Notre technicien qualifie votre urgence et vous indique une fourchette de prix avant de partir.</p>
+          </div>
+          <div class="step">
+            <div class="step-n" aria-hidden="true"></div>
+            <h3>Intervention rapide</h3>
+            <p>Le plombier arrive avec le matériel adapté. Délai moyen : 30 minutes sur Paris.</p>
+          </div>
+          <div class="step">
+            <div class="step-n" aria-hidden="true"></div>
+            <h3>Réparation garantie</h3>
+            <p>Devis signé sur place, travaux réalisés, facture remise. Garantie pièces et main-d'œuvre.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE + RASSURANCE -->
+    <section class="section section--cream">
+      <div class="container">
+        <div class="split">
+          <div class="reveal-left">
+            <div class="section-head">
+              <span class="eyebrow">Pourquoi nous choisir</span>
+              <h2>Des plombiers d'urgence formés aux situations critiques</h2>
+            </div>
+            <p class="lead">Nos techniciens interviennent dans les immeubles haussmanniens, les copropriétés modernes et les pavillons de banlieue. Ils connaissent les contraintes de chaque type de bâtiment parisien.</p>
+            <ul class="list-check mt-3">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Véhicule équipé de pièces de rechange courantes
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Matériel de détection de fuite non destructif
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Devis transparent avant chaque intervention
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Garantie pièces et main-d'œuvre sur tous les travaux
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Rapport d'intervention remis à la fin pour votre assurance
+              </li>
+            </ul>
+            <div class="btn-row mt-4">
+              <a class="btn btn-call" href="tel:0100000000">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                Appeler le 01 00 00 00 00
+              </a>
+            </div>
+          </div>
+          <div class="reveal-zoom">
+            <div class="imgwrap imgwrap--tall">
+              <img src="assets/images/detail.jpg" alt="Plombier en train d'inspecter une canalisation lors d'une intervention d'urgence">
+              <span class="tag">Intervention en cours</span>
+              <span class="float-stat">
+                <b data-count="30">0</b>
+                <span>min max</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TARIFS -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Tarification</span>
+          <h2>Tarifs dépannage urgence</h2>
+          <p>Un prix annoncé avant chaque intervention. Pas de mauvaise surprise sur la facture finale.</p>
+        </div>
+        <div class="reveal" data-delay="1">
+          <table class="tarif-table">
+            <caption>Tarifs indicatifs TTC. Un devis précis vous est communiqué par téléphone avant l'envoi du technicien.</caption>
+            <thead>
+              <tr>
+                <th>Prestation</th>
+                <th>Détail</th>
+                <th>À partir de</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Déplacement urgence jour</td>
+                <td>Lundi–vendredi, 8h–20h</td>
+                <td class="price">Inclus</td>
+              </tr>
+              <tr>
+                <td>Déplacement urgence nuit / W-E</td>
+                <td>20h–8h, samedi, dimanche, jours fériés</td>
+                <td class="price">Majoration applicable</td>
+              </tr>
+              <tr>
+                <td>Débouchage urgence</td>
+                <td>Évier, siphon, WC, évacuation simple</td>
+                <td class="price">Sur devis</td>
+              </tr>
+              <tr>
+                <td>Recherche et réparation fuite</td>
+                <td>Canalisations encastrées, joints, raccords</td>
+                <td class="price">Sur devis</td>
+              </tr>
+              <tr>
+                <td>Remplacement robinetterie / mitigeur</td>
+                <td>Fourniture et pose, pièce standard</td>
+                <td class="price">Sur devis</td>
+              </tr>
+              <tr>
+                <td>Dépannage chauffe-eau</td>
+                <td>Diagnostic, pièce ou remplacement</td>
+                <td class="price">Sur devis</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="tarif-note">Le prix définitif est établi après diagnostic sur place. Vous signez le devis avant que les travaux commencent. <a href="tarifs.html" style="color:var(--c-primary-700);font-weight:600">Voir tous nos tarifs →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVIS -->
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Témoignages clients</span>
+          <h2>Ils nous ont fait confiance en urgence</h2>
+          <p>Des centaines d'interventions réalisées chaque année à Paris et en Île-de-France.</p>
+        </div>
+        <div class="grid grid-3">
+          <figure class="review reveal" data-delay="1">
+            <div class="stars" aria-label="5 étoiles sur 5">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote>« Fuite sous l'évier à 23h, je pensais passer une nuit catastrophique. Le plombier était là en 25 minutes, problème réglé en une heure. Service impeccable. »</blockquote>
+            <figcaption class="who">
+              <span class="av">S</span>
+              <span><b>Sophie M.</b><span>Paris 11e</span></span>
+            </figcaption>
+          </figure>
+          <figure class="review reveal" data-delay="2">
+            <div class="stars" aria-label="5 étoiles sur 5">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote>« WC bouché un dimanche matin, avec des invités à la maison. Plombier Minute est arrivé en 20 minutes, propre et efficace. Prix annoncé avant : aucune surprise. »</blockquote>
+            <figcaption class="who">
+              <span class="av">K</span>
+              <span><b>Karim B.</b><span>Boulogne-Billancourt</span></span>
+            </figcaption>
+          </figure>
+          <figure class="review reveal" data-delay="3">
+            <div class="stars" aria-label="5 étoiles sur 5">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote>« Rupture de canalisation dans la cuisine, de l'eau partout. Appelé à 2h du matin, intervention à 2h35. Le plombier était calme, rapide et très pro. »</blockquote>
+            <figcaption class="who">
+              <span class="av">N</span>
+              <span><b>Nathalie R.</b><span>Saint-Denis (93)</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZONES -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Zone d'intervention</span>
+          <h2>Paris et toute l'Île-de-France</h2>
+          <p>Nos plombiers d'urgence couvrent l'ensemble des arrondissements parisiens et les communes limitrophes. <a href="zones-intervention.html" style="color:var(--c-primary-700);font-weight:600">Voir toutes les zones →</a></p>
+        </div>
+        <div class="zones-grid reveal" data-delay="1">
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Paris 1er
+          </span>
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Paris 2e–4e
+          </span>
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Paris 5e–7e
+          </span>
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Paris 8e–10e
+          </span>
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Paris 11e–13e
+          </span>
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Paris 14e–16e
+          </span>
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Paris 17e–20e
+          </span>
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Boulogne (92)
+          </span>
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Neuilly (92)
+          </span>
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Vincennes (94)
+          </span>
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Saint-Denis (93)
+          </span>
+          <span class="zone-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Montreuil (93)
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--cream">
+      <div class="container container--narrow">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Tout savoir sur le dépannage d'urgence</h2>
+        </div>
+        <div class="faq reveal" data-delay="1">
+          <details open>
+            <summary>
+              À quelle heure puis-je appeler pour une urgence plomberie ?
+              <span class="ico" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              Vous pouvez appeler le <a href="tel:0100000000" style="color:var(--c-primary-700);font-weight:600">01 00 00 00 00</a> à n'importe quelle heure du jour ou de la nuit, y compris les week-ends et jours fériés. Notre astreinte d'urgence est active 24h/24 et 365 jours par an. Un technicien qualifié décroche en moins de 3 sonneries.
+            </div>
+          </details>
+          <details>
+            <summary>
+              Combien de temps faut-il attendre avant l'arrivée du plombier ?
+              <span class="ico" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              Notre délai d'intervention moyen est de 30 minutes sur Paris intra-muros. En petite couronne (92, 93, 94), le délai peut aller jusqu'à 45 minutes selon l'heure et le trafic. Nous vous communiquons un créneau précis lors de l'appel.
+            </div>
+          </details>
+          <details>
+            <summary>
+              Faut-il couper l'eau avant l'arrivée du plombier ?
+              <span class="ico" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              En cas de fuite active, oui : coupez l'eau au robinet d'arrêt le plus proche (sous l'évier, derrière la chasse d'eau, ou au compteur général). Si vous ne trouvez pas la vanne de coupure, notre technicien vous guidera par téléphone. N'hésitez pas à appeler avant même que le problème empire.
+            </div>
+          </details>
+          <details>
+            <summary>
+              Le prix sera-t-il plus élevé la nuit ou le week-end ?
+              <span class="ico" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-body">
+              Une majoration de nuit et de week-end s'applique, comme chez tout artisan en astreinte. Le montant exact vous est communiqué par téléphone avant l'envoi du technicien, et vous signez le devis sur place avant que les travaux débutent. Pas de surprise sur la facture. <a href="tarifs.html" style="color:var(--c-primary-700);font-weight:600">Voir nos tarifs →</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="cta-band reveal-zoom">
+          <h2>Une urgence plomberie en ce moment ?</h2>
+          <p>N'attendez pas — chaque minute compte. Appelez le 01 00 00 00 00 et un technicien sera chez vous en moins de 30 minutes.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="tel:0100000000">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Appeler le 01 00 00 00 00
+            </a>
+            <a class="btn btn-ghost" href="contact.html">Demander un devis</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAILLAGE INTERNE -->
+    <section class="section section--cream section--tight">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Nos autres services</span>
+          <h2>Plombier Minute, bien au-delà de l'urgence</h2>
+        </div>
+        <div class="grid grid-4 reveal" data-delay="1">
+          <article class="card card-service">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 16a4 4 0 0 1-.88-7.903A5 5 0 1 1 15.9 6h.1a5 5 0 0 1 1 9.9M9 19l3 3m0 0 3-3m-3 3V10"/></svg>
+            </span>
+            <h3>Débouchage</h3>
+            <p>Curage, hydrocurage et débouchage de toutes canalisations.</p>
+            <a class="more" href="debouchage-canalisation.html">Voir le service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+          <article class="card card-service">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7Z"/></svg>
+            </span>
+            <h3>Recherche de fuite</h3>
+            <p>Détection non destructive par caméra thermique ou endoscopie.</p>
+            <a class="more" href="recherche-fuite.html">Voir le service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+          <article class="card card-service">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </span>
+            <h3>WC &amp; sanitaires</h3>
+            <p>Réparation, remplacement et installation de tous vos équipements.</p>
+            <a class="more" href="wc-sanitaires.html">Voir le service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+          <article class="card card-service">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            </span>
+            <h3>Tous les services</h3>
+            <p>Plomberie générale, assainissement, installation sanitaire.</p>
+            <a class="more" href="nos-services.html">Voir tous <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+<!-- FOOTER : verbatim sur toutes les pages. -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="14" fill="#F97316"/>
+              <circle cx="32" cy="34" r="18" fill="none" stroke="#18181B" stroke-width="4"/>
+              <path d="M26 12h12M32 16v6" stroke="#18181B" stroke-width="4" stroke-linecap="round"/>
+              <path d="M32 34V24M32 34l9 5" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+            <span style="color:#fff">Plombier<b style="color:var(--c-accent)">Minute</b></span>
+          </a>
+          <p class="mt-2">Plombier à Paris et en Île-de-France. Débouchage, recherche de fuite, dépannage d'urgence 24/7 et sanitaires, avec un prix annoncé avant chaque intervention.</p>
+          <div class="footer-contact">
+            <a href="tel:0100000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" stroke-linecap="round" stroke-linejoin="round"/></svg> 01 00 00 00 00</a>
+            <span style="display:inline-flex;gap:.5rem;align-items:center"><svg viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" aria-hidden="true" style="width:16px;height:16px;flex:none"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> [ADRESSE à compléter]</span>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="nos-services.html">Tous les services</a></li>
+            <li><a href="depannage-urgence.html">Urgence 24/7</a></li>
+            <li><a href="debouchage-canalisation.html">Débouchage</a></li>
+            <li><a href="recherche-fuite.html">Recherche de fuite</a></li>
+            <li><a href="wc-sanitaires.html">WC &amp; sanitaires</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Infos</h4>
+          <ul>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="zones-intervention.html">Zones d'intervention</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Disponibilité</h4>
+          <p>Astreinte d'urgence 24h/24 et 7j/7, week-ends et jours fériés compris, sur Paris et toute l'Île-de-France.</p>
+          <a class="btn btn-primary btn-block mt-2" href="tel:0100000000">Appeler maintenant</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Plombier Minute — SIRET 106 488 794 00012. Responsable de publication : Irène Taupin.</span>
+        <span><a href="mentions-legales.html">Mentions légales</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE CALL BAR : verbatim, juste avant le schema/fin de body. -->
+  <div class="callbar" aria-hidden="false">
+    <a class="btn btn-ghost" href="contact.html" style="--btn-fg:#fff;border-color:rgba(255,255,255,.4)">Devis</a>
+    <a class="btn btn-primary" href="tel:0100000000">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Appeler
+    </a>
+  </div>
+
+  <!-- LocalBusiness schema (verbatim, fin de body) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Plombier Minute",
+    "image": "https://[DOMAINE]/assets/images/hero.jpg",
+    "url": "https://[DOMAINE]/",
+    "telephone": "+33100000000",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[ADRESSE à compléter]",
+      "addressLocality": "Paris",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "areaServed": "Paris et Île-de-France",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  }
+  </script>
+
+</body>
+</html>
